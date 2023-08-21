@@ -5,6 +5,16 @@ how to deploy it on Polygon Mumbai Testnet
 
 ![PolyModule3](https://authoring.metacrafters.io/assets/cms/Assessment_b05f6ed658.png?updated_at=2023-02-24T00:00:37.278Z)
 
+## Requirements
+
+To successfully complete the Final Challenge, your project should:
+
+1. Write a correct circuit.circom implementation
+2. Compile the circuit to generate circuit intermediaries
+3. Generate a proof using inputs A=0 B=1
+4. Deploy a solidity verifier to Sepolia or Mumbai Testnet
+5. Call the verifyProof() method on the verifier contract and assert output is true
+
 ## Circuit Implementation
 
 The main circuit is defined in the circuit.circom file. The circuit consists of three basic gates (AND, OR, and NOT) and a template named Multiplier2. The circuit logic for Multiplier2 is as follows:
