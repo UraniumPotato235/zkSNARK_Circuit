@@ -29,13 +29,20 @@ Utilize the provided circuit.circom file to implement the logical gate for binar
 
 ### 2. Compiling the Circuit
 Compile the circuit using the circom compiler to generate the essential circuit.json file:
-npx hardhat circom
+`npx hardhat circom`
 
 ### 3. Generating the Proof
-Generate a proof based on the given assignment. Create an input.json file with the desired input values
+Inside your input.json file paste
+`{   "a": "0",   "b": "1" }` 
 
 ### 4. Deploying the Solidity Verifier
-Deploy a verifier contract on the Sepolia or Mumbai Testnet using the snarkjs library:
+`npx hardhat run scripts/deploy.ts`
+This script does 4 things
+
+1. Deploys the MultiplierVerifier.sol contract
+2. Generates a proof from circuit intermediaries with `generateProof()`
+3. Generates calldata with `generateCallData()`
+4. Calls `verifyProof()` on the verifier contract with calldata
 
 ### 5. Successful Deployment
 Upon successful deployment, the terminal will display a confirmation, indicating the deployment of the verifier contract:
@@ -44,3 +51,6 @@ Compiled 1 Solidity file successfully
 Verifier deployed to 0xcF77f0c1c76BBeed7c36946c1E47aaE1E3a62157
 Verifier result: true
 ```
+### Author
+
+Ankit Kunwar
