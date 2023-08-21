@@ -1,6 +1,13 @@
 pragma circom 2.0.0;
 
-/*This circuit template checks that c is the multiplication of a and b.*/  
+
+/*
+1. Write a correct circuit.circom implementation
+2. Compile the circuit to generate circuit intermediaries
+3. Generate a proof using inputs A=0 B=1
+4. Deploy a solidity verifier to Sepolia or Mumbai Testnet
+5. Call the verifyProof() method on the verifier contract and assert output is true
+*/
 
 template Multiplier2 () {  
    //SIGNAL INPUT
