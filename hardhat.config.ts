@@ -3,7 +3,7 @@ import "@nomicfoundation/hardhat-toolbox";
 // https://github.com/projectsophon/hardhat-circom
 import "hardhat-circom";
 // circuits
-import circuits = require('./circuits.config.json')
+import circuits = require('./circuits.config.json');
 
 // set env var to the root of the project
 process.env.BASE_PATH = __dirname;
@@ -25,7 +25,7 @@ const config: HardhatUserConfig = {
   networks: {
     mumbai: {
       url: `https://rpc-mumbai.maticvigil.com	`,
-      accounts: ["25023944665cc7e1e7c0e49aa582640ef587c79d3fd9f7e3c69443837d40ec32"],
+      accounts: ["f6f09a0b12399de1287b0742fab350b67912cd5cd9b4d9e979a8d355f85572fd"],
     },
   },
   circom: {
